@@ -1,0 +1,47 @@
+body {
+  background-image: url(http://www.hirocafe.com/timecard/image/time-top.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #464646;
+}
+
+.box13 {
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    color: #FFF;
+    background: #6eb7ff;
+    border-bottom: solid 6px #3f87ce;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+    border-radius: 9px;
+}
+.box13 p {
+    margin: 0; 
+    padding: 0;
+}
+
+.osare3-table {
+ width:100%;
+ border-collapse: separate; 
+ border: none;
+ border-spacing: 0px 10px ;
+}
+
+table{
+  border-collapse: separate;
+  border-spacing: 5px 0;
+  margin: 0 auto;
+  background: #f0f8ff;
+}
+td,th{
+  padding: 10px;
+}
+th{
+  color: #fff;
+  background: #005ab3;
+  border-radius: 5px;
+}
+td{
+  color: #005ab3;
+}

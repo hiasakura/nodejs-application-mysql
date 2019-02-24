@@ -1,0 +1,36 @@
+html
+  head
+    title #{title}
+    link(rel="stylesheet" href="http://www.hirocafe.com/timecard/css/my.css")
+    link(rel="stylesheet" href="http://www.hirocafe.com/timecard/css/bootstrap.min.css")
+    script(type='text/javascript', src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
+    script(type='text/javascript', src='http://www.hirocafe.com/timecard/js/bootstrap.min.js')
+  body
+    nav.navbar.navbar-expand-lg.navbar-light.bg-light
+      a.navbar-brand Timecard Management Application
+      button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarEexample')
+        span.navbar-toggler-icon
+      #navbarEexample.collapse.navbar-collapse
+        ul.navbar-nav
+          li.nav-item
+            a.nav-link(href='./insert_top') Insert
+          li.nav-item
+            a.nav-link(href='./search_top') Search
+          li.nav-item
+            a.nav-link(href='./delete_top') Delete
+    table.osare3-table.col4t
+        thead
+            tr
+                td 日付
+                td 顧客
+                td カテゴリ
+                td 作業時間
+                td 詳細
+        tbody
+            each data in SearchData
+                tr
+                    td #{data.date_time}
+                    td #{data.customer}
+                    td #{data.activity}
+                    td #{data.hours}
+                    td #{data.remarks}

@@ -1,0 +1,30 @@
+doctype html
+html
+  head
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title ファイルロード
+    link(href='http://www.hirocafe.com/timecard/css/bootstrap.min.css', rel='stylesheet')
+    link(href="http://www.hirocafe.com/timecard/css/my.css",rel="stylesheet" )
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
+    script(src='http://www.hirocafe.com/timecard/js/bootstrap.min.js')
+  body
+    nav.navbar.navbar-expand-lg.navbar-light.bg-light
+      a.navbar-brand Timecard Management Application
+      button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarEexample')
+        span.navbar-toggler-icon
+      #navbarEexample.collapse.navbar-collapse
+        ul.navbar-nav
+          li.nav-item
+            a.nav-link(href='./insert_top') Insert
+          li.nav-item
+            a.nav-link(href='./search_top') Search
+          li.nav-item
+            a.nav-link(href='./delete_top') Delete
+    .jumbotron
+      .container
+        form(action='127.0.0.1:58080/delete:', method='POST', enctype='multipart/form-data')
+          .form-group
+            label Your Name
+            input.form-control(type='text', name='assigned', required='')
+            input.btn.btn-primary(type='submit', value='Data Delete')
