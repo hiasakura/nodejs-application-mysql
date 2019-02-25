@@ -2,6 +2,7 @@ var express = require('express');
 var app = express();
 var multer = require("multer");
 var fs = require("fs");
+const auth = require('./auth');
 const mysql = require('mysql');
 const connection = mysql.createConnection({
 	host : "XXXXXXXXXXXXXXXXXXXXXXXX",
@@ -9,6 +10,8 @@ const connection = mysql.createConnection({
 	password : "XXXXXXXXXXXXXXXXXXXXXXXX",
 	database: "XXXXXXXXXXXXXXXXXXXXXXXX",
 });
+
+app.use(auth);
 
 app.set('view engine', 'pug');
 app.use(express.static('views'));
